@@ -12,3 +12,7 @@ def save(visit):
     id = results[0]['id']
     visit.id = id
     return visit
+
+def delete_all():
+    sql = "DELETE  FROM visits"
+    run_sql(sql)

@@ -1,9 +1,10 @@
 DROP TABLE IF EXISTS visits;
 DROP TABLE IF EXISTS systems;
 
+
 CREATE TABLE systems (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
+    name VARCHAR(255)
 );
 
 CREATE TABLE visits (
