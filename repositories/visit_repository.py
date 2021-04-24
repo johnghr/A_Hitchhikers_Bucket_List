@@ -28,3 +28,15 @@ def select_all():
         visit = Visit(row['goal'], system, row['achieved'], row['id'])
         visits.append(visit)
     return visit
+
+def select(id):
+    visit = None
+
+    sql = "SELECT * FROM visits WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        system = system_repository.select(result['system_id'])
+        visit = Visit(result['goal'], system, result['achieved'], result['id'])
+    return visit

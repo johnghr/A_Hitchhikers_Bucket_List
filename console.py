@@ -24,6 +24,7 @@ visit_repository.save(visit_1)
 
 visit_repository.select_all()
 
+selected_visit = visit_repository.select(1)
 
 
 
