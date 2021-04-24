@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+{% for visit in all_visits %}
 <div class="visit">
     <div class="content">
-        {{visits.goal}}
+        {{visit.goal}}
             <div class="goal">
-                {{visits.system.name}}  
+                {{visit.system.name}}  
             </div>
                 <div class="achieved">
-                    {{visits.achieved}}
+                    {{visit.achieved}}
                 </div>
+                {% endfor %}
     </div>
 </div>
 

@@ -9,6 +9,8 @@ import repositories.system_repository as system_repository
 # visit_repository.delete_all()
 # system_repository.delete_all()
 
+pdb.set_trace()
+
 system_1 = System("The end of time and matter")
 system_repository.save(system_1)
 

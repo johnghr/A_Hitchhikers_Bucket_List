@@ -22,7 +22,7 @@ def select_all():
     for row in results:
         system = System(row['name'], row['id'])
         systems.append(system)
-        return system
+        return systems
 
 
 def select(id):
@@ -35,10 +35,10 @@ def select(id):
         system = System(result['name'], result['id'] )
     return system
 
-# def update(system):
-#     sql = "UPDATE systems SET (name) = (%s) WHERE id = %s"
-#     values = [system.name, system.id]
-#     run_sql(sql, values)
+def update(system):
+    sql = "UPDATE systems SET (name) = (%s) WHERE id = %s"
+    values = [system.name, system.id]
+    run_sql(sql, values)
 
 def delete(id):
     sql = "DELETE FROM systems WHERE id = %s"

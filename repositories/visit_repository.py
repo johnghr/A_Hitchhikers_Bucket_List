@@ -24,7 +24,7 @@ def select_all():
         system = system_repository.select(row['id'])
         visit = Visit(row['goal'], system, row['achieved'], row['id'])
         visits.append(visit)
-    return visit
+    return visits
 
 def select(id):
     visit = None
