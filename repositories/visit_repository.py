@@ -18,3 +18,13 @@ def delete_all():
     run_sql(sql)
 
 def select_all():
+    visit = []
+
+    sql = "SELECT * FROM visits"
+    results = run_sql(sql)
+
+    for row in results:
+        system = system_repository.select(row['id'])
+        visit = Visit(row['goal'], system, row['achieved'], row['id'])
+        visits.append(visit)
+    return visit

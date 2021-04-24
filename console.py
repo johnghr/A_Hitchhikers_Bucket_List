@@ -17,10 +17,10 @@ system_repository.save(system_2)
 
 system_repository.select_all()
 
-selected_system = system_repository.select(1)
+selected_system = system_repository.select(3)
 
-# visit_1 = Visit("Watch the universe end alongside a slap up meal.", system_1)
-# visit_repository.save(visit_1)
+visit_1 = Visit("Watch the universe end alongside a slap up meal.", system_1)
+visit_repository.save(visit_1)
 
 
 
