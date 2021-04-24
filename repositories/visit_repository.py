@@ -18,7 +18,7 @@ def delete_all():
     run_sql(sql)
 
 def select_all():
-    visit = []
+    visits = []
 
     sql = "SELECT * FROM visits"
     results = run_sql(sql)
