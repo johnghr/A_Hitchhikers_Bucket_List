@@ -13,9 +13,6 @@ def save(visit):
     visit.id = id
     return visit
 
-def delete_all():
-    sql = "DELETE  FROM visits"
-    run_sql(sql)
 
 def select_all():
     visits = []
@@ -40,3 +37,17 @@ def select(id):
         system = system_repository.select(result['system_id'])
         visit = Visit(result['goal'], system, result['achieved'], result['id'])
     return visit
+
+def update(visit):
+    sql = "UPDATE visits SET (goal, system_id, achieved) = (%s, %s, %s) WHERE id = %s"
+    values = [visit.goal, visit.system.id, visit.achieved, visit.id]
+    run_sql(sql, values)
+
+def delete(id):
+    sql = "DELETE FROM visits WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+    
+def delete_all():
+    sql = "DELETE  FROM visits"
+    run_sql(sql)
