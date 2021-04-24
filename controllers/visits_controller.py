@@ -10,8 +10,10 @@ visits_blueprint = Blueprint("visits", __name__)
 
 @visits_blueprint.route("/visits")
 def visits():
-    
-    visit = visit_repository.select_all()
-    return render_template("visits/index.html", visit=visit)
+    visits = visit_repository.select_all()
+    return render_template("visits/index.html", visits=visits)
 
-@visits_blueprint.route("/visits/new", methods['GET'])
+@visits_blueprint.route("/visits/new", methods=['GET'])
+def new_visit():
+    systems = system_repository.select_all()
+    return render_template("visits/new.html")
