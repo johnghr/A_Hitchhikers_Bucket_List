@@ -4,4 +4,13 @@ from flask import Blueprint
 from repositories import visit_repository
 from repositories import system_repository
 
-from models.visit import visit
+from models.visit import Visit
+
+visits_blueprint = Blueprint("visits", __name__)
+
+@visits_blueprint.route("/visits")
+def visits():
+    # visits = visit_repository.select_all()
+    return render_template("visits/index.html")
+
+# @visits_blueprint.route("/visits/new", methods['GET'])

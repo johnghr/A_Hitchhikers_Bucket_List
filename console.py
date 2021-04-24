@@ -23,15 +23,16 @@ visit_1 = Visit("Watch the universe end alongside a slap up meal.", system_1)
 visit_repository.save(visit_1)
 
 visit_2 = Visit("Have a pint or four at The Red Lion before the earth is destroyed to make way for hyperspace-bypass ", system_2)
+visit_repository.save(visit_2)
 
 visit_repository.select_all()
 
 selected_visit = visit_repository.select(1)
 
 
-visit_repository.delete(1)
-system_repository.delete(1)
+# visit_repository.delete(1)
+# system_repository.delete(1)
 
-visit_repository.update(visit_2)
-system_repository.update(system_2)
+# visit_repository.update(visit_2)
+# system_repository.update(system_2)
 
