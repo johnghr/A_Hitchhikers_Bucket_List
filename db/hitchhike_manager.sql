@@ -9,6 +9,7 @@ CREATE TABLE systems (
 
 CREATE TABLE visits (
     id SERIAL PRIMARY KEY,
+    goal VARCHAR(255),
     system_id INT REFERENCES systems(id),
     achieved BOOLEAN 
 );

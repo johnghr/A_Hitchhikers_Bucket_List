@@ -16,3 +16,5 @@ def save(visit):
 def delete_all():
     sql = "DELETE  FROM visits"
     run_sql(sql)
+
+def select_all():

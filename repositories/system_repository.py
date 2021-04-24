@@ -26,13 +26,13 @@ def select_all():
 
 
 def select(id):
-    system = None
-    sql = "SELECT FROM systems WHERE id = %s"
+    user = None
+    sql = "SELECT * FROM systems WHERE id = %s"
     values = [id]
-    result = run_sql(values, sql)[0]
+    result = run_sql(sql, values)[0]
 
-    if system is not None:
-        system = System(result['name'], result['id'])
+    if result is not None:
+        system = System(result['name'], result['id'] )
     return system
 
 
