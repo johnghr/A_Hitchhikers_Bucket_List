@@ -24,7 +24,8 @@ def select_all():
 
     for row in results:
         system = system_repository.select(row['system_id'])
-        visit = Visit(row['goal'], system, row['achieved'], row['id'])
+        planet = planet_repository.select(row['planet_id'])
+        visit = Visit(row['goal'], system, planet, row['achieved'], row['id'])
         visits.append(visit)
     return visits
 
