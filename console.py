@@ -21,6 +21,8 @@ system_repository.save(system_2)
 
 planet_1 = Planet("Earth", system_2)
 planet_2 = Planet("Milliways", system_1)
+planet_repository.save(planet_1)
+planet_repository.save(planet_2)
 
 system_repository.select_all()
 
