@@ -19,17 +19,20 @@ system_repository.save(system_1)
 system_2 = System("Solar System")
 system_repository.save(system_2)
 
+planet_1 = Planet("Earth", system_2)
+planet_2 = Planet("Milliways", system_1)
+
 system_repository.select_all()
 
 selected_system = system_repository.select(1)
 
-visit_1 = Visit("Watch the universe end alongside a slap up meal.", system_1)
+visit_1 = Visit("Watch the universe end alongside a slap up meal.", system_1, planet_2)
 visit_repository.save(visit_1)
 
-visit_2 = Visit("Have a pint or four at The Red Lion before the earth is destroyed to make way for hyperspace-bypass ", system_2)
+visit_2 = Visit("Have a pint or four at The Red Lion before the earth is destroyed to make way for hyperspace-bypass ", system_2, planet_1)
 visit_repository.save(visit_2)
 
-planet_1 = Planet("Earth")
+
 
 
 
