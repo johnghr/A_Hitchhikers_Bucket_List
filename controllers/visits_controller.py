@@ -8,6 +8,7 @@ from models.visit import Visit
 from models.system import System
 
 visits_blueprint = Blueprint("visits", __name__)
+systems_blueprint = Blueprint("systems", __name__)
 
 # route for list of visits
 @visits_blueprint.route("/visits")
@@ -36,5 +37,6 @@ def create_visit():
 def show_task(id):
     visit = visit_repository.select(id)
     return render_template('visits/show.html', visit = visit)
+
 
 

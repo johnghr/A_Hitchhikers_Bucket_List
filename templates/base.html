@@ -4,34 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>Document</title>
 </head>
 <body> 
-    <div id="container"></div>
     <header>
-        <div id="header">
         <h1>Hitchhikers Bucket List for Life the Universe and Everything</h1>
-        </div>
-        <nav>
-            <ul class="menu">
-                <div id="home">
-                    <li><a href="/">Home</a></li>
-                </div>
-                <div id="visits">
-                    <li><a href="/visits">Visits</a></li>
-                </div>
-                <div id="add">   
-                    <li><a href="/visits/new">Add to List</a></li>
-                </div> 
-                </ul>
-        </nav>
-   </header>         
-   </div>
+    </header>
+    <nav>
+        <ul class="main-menu">
+            <li id="home"><a href="/">Home</a></li>
+            <li id="visits"><a href="/visits">Visits</a></li>
+            <li id="add" ><a href="/visits/new">Add to List</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul class="side-menu">
+            <li id="systems"><a href="/systems">Systems</a></li>
+        </ul>
+    </aside>
+   <main>
     {% block content %}
     {% endblock %}
-   <main>
-
    </main>
 </body>
 </html>

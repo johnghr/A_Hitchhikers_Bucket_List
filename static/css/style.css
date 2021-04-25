@@ -1,22 +1,86 @@
-#header {
-    grid-area: header;
+.main-menu {
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+    /* horizontal spacing */
+    justify-content: space-evenly;
+    /* vertical spacing */
+    align-items: center;
+    /* changed directions elements are displayed in from horizontal to vertical */
+    /* flex-direction: column; */
 }
 
-#home {
-    grid-area: home;
+.main-menu > li {
+    padding: 50px;
+    font-size: 25px;
+    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
-#visits {
-    grid-area: visits;
+.main-menu a {
+    color: #B8B8B8;
+}
+main {
+    border-top: 3px solid #B8B8B8;
+    border-left: 3px solid #B8B8B8;
 }
 
-#add {
-    grid-area: add;
+nav {
+    border-bottom: 3px solid  #B8B8B8;
+    border-left: 3px solid  #B8B8B8; 
 }
 
-#container {
+aside {
+    border-top: 3px solid  #B8B8B8;
+    border-right: 3px solid  #B8B8B8;
+}
+
+.side-menu {
+    list-style: none;
+    padding:0%
+}
+
+.side-menu > li {
+    padding: 15px;
+    font-size: 25px;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+.side-menu a {
+    color: #B8B8B8;
+}
+
+header {
+    display: flex;
+    border-bottom: 3px solid #B8B8B8;
+    border-right: 3px solid #B8B8B8;
+}
+
+h1 {
+    max-width: 190px;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+body {
+    background-color: #002266;
+    color: #B8B8B8;
     display: grid;
-    grid-template-areas: 
-      'header home visits add';
-    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-template-columns: 1fr 7fr;
+    height: 100vh;
+    margin: 0;
+    grid-template-rows: 1fr 5fr;
+    
 }
+
+body > * {
+    padding: 15px; 
+}
+
+h2 {
+    color: #DBDB2C;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    text-shadow: rgb(235, 8, 8) 1px 0 20px;;
+}
+

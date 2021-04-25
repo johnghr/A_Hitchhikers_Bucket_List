@@ -4,12 +4,12 @@
 {% for visit in visits %}
 <div class="visit">
     <div class="content">
-        {{visit.goal}}
+        <p>Goal: {{visit.goal}}</p>
         <div class="goal">
-            {{visit.system.name}}  
+            <p>System: {{visit.system.name}}</p>  
         </div>
         <div class="achieved">
-            {{visit.achieved}}
+            <p>Achieved? {{visit.achieved}}</p>
         </div>
     </div>
 </div>
