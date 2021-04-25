@@ -1,4 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-form here and any previously made systems in database
+{% for system in systems %}
+<div class="systems">
+    <div class="content">
+        <p>Name: {{system.name}}</p>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

@@ -9,4 +9,5 @@ systems_blueprint = Blueprint("systems", __name__)
 
 @systems_blueprint.route("/systems")
 def systems():
-    return render_template('systems/index.html')
+    systems = system_repository.select_all()
+    return render_template('systems/index.html', systems = systems)
