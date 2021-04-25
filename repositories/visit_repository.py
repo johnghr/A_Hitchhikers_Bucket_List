@@ -43,8 +43,8 @@ def select(id):
     return visit
 
 def update(visit):
-    sql = "UPDATE visits SET (goal, system_id, achieved) = (%s, %s, %s) WHERE id = %s"
-    values = [visit.goal, visit.system.id, visit.achieved, visit.id]
+    sql = "UPDATE visits SET (goal, system_id, planet_id, achieved) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [visit.goal, visit.system.id, visit.planet.id, visit.achieved, visit.id]
     run_sql(sql, values)
 
 def delete(id):
