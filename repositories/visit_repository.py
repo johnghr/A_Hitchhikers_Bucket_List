@@ -24,10 +24,12 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
+       
         system = system_repository.select(row['system_id'])
         planet = planet_repository.select(row['planet_id'])
         visit = Visit(row['goal'], system, planet, row['achieved'], row['id'])
         visits.append(visit)
+    
     return visits
 
 def select(id):

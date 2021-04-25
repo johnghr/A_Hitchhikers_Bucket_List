@@ -34,7 +34,7 @@ visit_repository.save(visit_1)
 visit_2 = Visit("Have a pint or four at The Red Lion before the earth is destroyed to make way for hyperspace-bypass ", system_2, planet_1)
 visit_repository.save(visit_2)
 
-
+planet_repository.select_all()
 
 
 
