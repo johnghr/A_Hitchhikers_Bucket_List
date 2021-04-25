@@ -6,10 +6,12 @@ from models.system import System
 import repositories.system_repository as system_repository
 
 def save(visit):
+    # id assigned in database but not in python object instance
     sql = "INSERT INTO visits (goal, system_id, achieved) VALUES (%s, %s, %s) RETURNING *"
     values = [visit.goal, visit.system.id, visit.achieved]
     results = run_sql(sql, values)
     id = results[0]['id']
+    # assigns id created in database to python object instance
     visit.id = id
     return visit
 
@@ -21,7 +23,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        system = system_repository.select(row['id'])
+        system = system_repository.select(row['system_id'])
         visit = Visit(row['goal'], system, row['achieved'], row['id'])
         visits.append(visit)
     return visits

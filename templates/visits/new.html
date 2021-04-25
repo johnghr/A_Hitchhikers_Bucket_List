@@ -7,11 +7,19 @@
         <label for="goal">Goal:</label>
         <input type="text" name="goal" id="goal" required autofocus>
     </div>
-
+    
     <div>
-        <label for="system">System:</label>
-        <input type="text" name="system" id="system">
+        <label for="system_id">System:</label>
+        <select name="system_id" id="system_id">
+            {% for system in all_systems %}
+                <option value="{{system.id}}">{{system.name}}</option>
+            {% endfor %}
+        </select>
+            
     </div>
+
+
+
 
     <div>
         <label for="Achieved">Achieved:</label>

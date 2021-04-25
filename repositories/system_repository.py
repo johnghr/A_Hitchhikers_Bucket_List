@@ -22,10 +22,12 @@ def select_all():
     for row in results:
         system = System(row['name'], row['id'])
         systems.append(system)
-        return systems
+    return systems
 
 
 def select(id):
+    print("system id")
+    print(id)
     user = None
     sql = "SELECT * FROM systems WHERE id = %s"
     values = [id]

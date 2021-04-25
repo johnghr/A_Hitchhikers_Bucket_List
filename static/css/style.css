@@ -1,0 +1,22 @@
+#header {
+    grid-area: header;
+}
+
+#home {
+    grid-area: home;
+}
+
+#visits {
+    grid-area: visits;
+}
+
+#add {
+    grid-area: add;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 
+      'header home visits add';
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+}
