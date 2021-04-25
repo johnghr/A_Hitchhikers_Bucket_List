@@ -1,6 +1,6 @@
 class Visit:
 
-    def __init__(self, goal, system, achieved = False, id  = None):
+    def __init__(self, goal, system, planet, achieved = False, id  = None):
         self.goal = goal
         self.system = system
         self.achieved = achieved

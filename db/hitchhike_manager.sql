@@ -1,7 +1,6 @@
-DROP TABLE IF EXISTS visits;
-DROP Table IF EXISTS planets;
 DROP TABLE IF EXISTS systems;
-
+DROP Table IF EXISTS planets;
+DROP TABLE IF EXISTS visits;
 
 
 CREATE TABLE systems (
@@ -12,13 +11,13 @@ CREATE TABLE systems (
 CREATE TABLE planets (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    system_id INT REFERENCES system(id)
+    system_id INT REFERENCES systems(id)
 );
 
 CREATE TABLE visits (
     id SERIAL PRIMARY KEY,
-    goal VARCHAR(255)
+    goal VARCHAR(255),
     system_id INT REFERENCES systems(id),
-    planet_id INT REFERENCES planets(id)
+    planet_id INT REFERENCES planets(id),
     achieved BOOLEAN 
 );

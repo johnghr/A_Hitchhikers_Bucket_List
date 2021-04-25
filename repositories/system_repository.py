@@ -1,8 +1,6 @@
 from db.run_sql import run_sql
 
 from models.system import System
-from models.visit import Visit
-
 
 
 def save(system):
