@@ -4,6 +4,7 @@ from models.visit import Visit
 from models.system import System
 
 import repositories.system_repository as system_repository
+import repositories.planet_repository as planet_repository
 
 def save(visit):
     # id assigned in database but not in python object instance

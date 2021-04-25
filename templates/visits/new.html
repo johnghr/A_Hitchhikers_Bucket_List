@@ -14,8 +14,16 @@
             {% for system in all_systems %}
                 <option value="{{system.id}}">{{system.name}}</option>
             {% endfor %}
-        </select>
-            
+        </select>      
+    </div>
+
+    <div>
+        <label for="planet_id">Planet:</label>
+        <select name="planet_id" id="planet_id">
+            {% for planet in all_planets %}
+                <option value="{{planet.id}}">{{planet.name}}</option>
+            {% endfor %}
+        </select>        
     </div>
 
     <div>
