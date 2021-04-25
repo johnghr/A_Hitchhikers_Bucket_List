@@ -38,7 +38,8 @@ def select(id):
 
     if result is not None:
         system = system_repository.select(result['system_id'])
-        visit = Visit(result['goal'], system, result['achieved'], result['id'])
+        planet = planet_repository.select(result['planet_id'])
+        visit = Visit(result['goal'], system, planet, result['achieved'], result['id'])
     return visit
 
 def update(visit):
