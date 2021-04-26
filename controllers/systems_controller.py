@@ -24,7 +24,7 @@ def create_system():
     system_repository.save(system)
     return redirect('/systems')
 
-@systems_blueprint.route("/systems/<id>", methods=['POST'])
+@systems_blueprint.route("/systems/<id>", methods=['GET'])
 def show_system(id):
     system = system_repository.select(id)
-    return render_template("systems/show.html")
+    return render_template("systems/show.html", system = system)
