@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/planets" method="POST">
+<form action="/planets/{{planet.id}}" method="POST">
     
     <div>
         <label for="system_id">System:</label>
@@ -21,12 +21,4 @@
 
 </form>
 
-{% for planet in planets %}
-<div class="planets">
-    <div class="content">
-        <p>Name: {{planet.name}}</p>
-        <a href="/planets/{{planet.id}}">Edit</a>
-    </div>
-</div>
-{% endfor %}
-{% endblock %}
+{%  end block%}
