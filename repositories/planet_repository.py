@@ -34,7 +34,7 @@ def select(id):
 
     if result is not None:
         system = system_repository.select(result['system_id'])
-        planet = Planet(result['name'], planet, result['id'])
+        planet = Planet(result['name'], system, result['id'])
     
     return planet
 

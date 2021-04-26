@@ -27,12 +27,10 @@ def list_visits():
 @visits_blueprint.route("/visits", methods=['POST'])
 def create_visit():
     goal = request.form['goal']
-    system_id = request.form['system_id']
     planet_id = request.form['planet_id']
     achieved = request.form['achieved']
-    system = system_repository.select(system_id)
     planet = planet_repository.select(planet_id)
-    visit = Visit(goal, system, planet, achieved)
+    visit = Visit(goal, planet.system, planet, achieved)
     visit_repository.save(visit)
     return redirect('/visits')
 

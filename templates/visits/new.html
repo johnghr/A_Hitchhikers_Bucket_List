@@ -9,15 +9,6 @@
     </div>
     
     <div>
-        <label for="system_id">System:</label>
-        <select name="system_id" id="system_id">
-            {% for system in systems %}
-                <option value="{{system.id}}">{{system.name}}</option>
-            {% endfor %}
-        </select>      
-    </div>
-
-    <div>
         <label for="planet_id">Planet:</label>
         <select name="planet_id" id="planet_id">
             {% for planet in planets %}

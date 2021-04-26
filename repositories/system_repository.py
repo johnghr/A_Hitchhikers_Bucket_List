@@ -36,7 +36,9 @@ def select(id):
     return system
 
 def update(system):
-    sql = "UPDATE systems SET (name) = (%s) WHERE id = %s"
+    print(system.name)
+    print(system.id)
+    sql = "UPDATE systems SET name = %s WHERE id = %s"
     values = [system.name, system.id]
     run_sql(sql, values)
 
