@@ -36,6 +36,10 @@ visit_repository.save(visit_2)
 
 planet_repository.select_all()
 
+planet_repository.select(1)
+
+
+
 
 
 

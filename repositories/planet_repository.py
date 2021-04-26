@@ -22,5 +22,22 @@ def select_all():
         system = system_repository.select(row['system_id'])
         planet =  Planet(row['name'], system, row['id'])
         planets.append(planet)
+
     return planets
+
+def select(id):
+    planet = None
+
+    sql = "SELECT * FROM planets WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        system = system_repository.select(result['system_id'])
+        planet = Planet(result['name'], planet, result['id'])
+    
+    return planet
+        
+
+
 
