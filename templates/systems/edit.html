@@ -4,21 +4,12 @@
 <form action="/systems/{{system.id}}" method="POST">
     
     <div>
-        <label for="system_id">System:</label>
-        <select name="system_id" id="system_id">
-            {% for system in systems %}
-                <option value="{{system.id}}">{{system.name}}</option>
-            {% endfor %}
-        </select>      
-    </div>
-
-    <div>
-        <label for="planets">Input Planet:</label>
-        <input type="text" name="planet" id="planets" required autofocus>
+        <label for="system">System:</label>
+        <input type="text" id="system" name="system" value="{{system.name}}" required autofocus>
     </div>
 
     <button type="submit">Execute</button>
 
 </form>
 
-{%  end block%}
+{%  endblock %}
