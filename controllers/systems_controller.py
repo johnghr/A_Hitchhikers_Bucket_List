@@ -23,3 +23,8 @@ def create_system():
     system = System(name) 
     system_repository.save(system)
     return redirect('/systems')
+
+@systems_blueprint.route("/systems/<id>", methods=['POST'])
+def show_system(id):
+    system = system_repository.select(id)
+    return render_template("books/show.html")
