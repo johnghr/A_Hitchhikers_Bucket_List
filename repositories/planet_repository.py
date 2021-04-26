@@ -43,6 +43,13 @@ def update(planet):
     values = [planet.name, planet.system.id, planet.id]
     run_sql(sql, values)
         
+def delete(id):
+    sql = "DELETE FROM planets WHERE id = %s"
+
+
+def delete_all():
+    sql = "DELETE  FROM planets"
+    run_sql(sql)
 
 
 
