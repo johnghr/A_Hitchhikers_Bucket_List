@@ -13,7 +13,7 @@ def systems():
     return render_template('systems/index.html', systems = systems)
 
 @systems_blueprint.route("/systems", methods=['GET'])
-def list_systems():
+def new_systems():
     systems = system_repository.select_all()
     return render_template("systems/index.html", systems = systems)
 

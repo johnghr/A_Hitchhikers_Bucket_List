@@ -18,7 +18,7 @@ def visits():
 
 # GET - Returns html form to the browser
 @visits_blueprint.route("/visits/new", methods=['GET'])
-def new_visit():
+def list_visits():
     systems = system_repository.select_all()
     planets = planet_repository.select_all()
     return render_template("visits/new.html", systems = systems, planets = planets)
