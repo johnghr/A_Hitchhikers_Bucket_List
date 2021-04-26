@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for system in systems %}
+<div class="planets">
+    <div class="content">
+        <p>Name: {{planet.name}}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

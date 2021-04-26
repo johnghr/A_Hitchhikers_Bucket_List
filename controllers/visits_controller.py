@@ -1,5 +1,4 @@
-from flask import Flask, render_template, redirect, request
-from flask import Blueprint
+from flask import Flask, render_template, redirect, request, Blueprint
 
 from repositories import visit_repository
 from repositories import system_repository
@@ -9,7 +8,6 @@ from models.visit import Visit
 from models.system import System
 
 visits_blueprint = Blueprint("visits", __name__)
-systems_blueprint = Blueprint("systems", __name__)
 
 # route for list of visits
 @visits_blueprint.route("/visits")
