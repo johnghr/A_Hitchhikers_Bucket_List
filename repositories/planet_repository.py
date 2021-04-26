@@ -37,6 +37,11 @@ def select(id):
         planet = Planet(result['name'], planet, result['id'])
     
     return planet
+
+def update(planet):
+    sql = "UPDATE planets SET (name) = (%s) WHERE id = %s"
+    values = [planet.name, planet.system.id, planet.id]
+    run_sql(sql, values)
         
 
 
