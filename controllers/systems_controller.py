@@ -12,8 +12,8 @@ def systems():
     systems = system_repository.select_all()
     return render_template('systems/index.html', systems = systems)
 
-@systems_blueprint.route("/systems/new", methods=['GET'])
-def new_system():
+@systems_blueprint.route("/systems", methods=['GET'])
+def list_systems():
     systems = system_repository.select_all()
     return render_template("systems/index.html", systems = systems)
 
