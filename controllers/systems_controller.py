@@ -34,3 +34,11 @@ def edit_system(id):
     system = system_repository.select(id)
     return render_template('systems/edit.html', system = system)
 
+@systems_blueprint.route("/systems/<id>", methods=['POST'])
+def update_system(id)
+    name = request.form['name']
+    system = System(name, id)
+    system_repository.update(system)
+    return redirect('/books')
+
+
