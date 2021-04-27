@@ -53,7 +53,15 @@ def update(id):
         visit.achieved = False
     visit_repository.update(visit)
     return redirect(f'/visits/{id}')
-    # return redirect('/visits')
+
+
+@visits_blueprint.route("/visits/<id>/delete", methods=['POST'])
+def delete_planet(id):
+    visit = visit_repository.select(id)
+    planet = visit.planet
+    planet.name = "None"
+
+    return redirect(f'/visits/{id}')
     
 
 

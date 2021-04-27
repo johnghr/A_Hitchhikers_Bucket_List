@@ -22,11 +22,11 @@
 </form>
 
 {% for planet in planets %}
-<div class="planets">
-    <div class="content">
-        <p>Name: {{planet.name}}</p>
-        <a href="/planets/{{planet.id}}">Edit</a>
+    <div class="planets">
+        <div class="content">
+            <p>Name: {{planet.name}}</p>
+            <p>System: {{planet.system.name}}</p> 
+        </div>
     </div>
-</div>
 {% endfor %}
 {% endblock %}
