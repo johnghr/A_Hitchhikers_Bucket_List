@@ -1,3 +1,5 @@
+/* sidebars */
+
 .main-menu {
     display: flex;
     list-style: none;
@@ -84,3 +86,4 @@ h2 {
     text-shadow: rgb(235, 8, 8) 1px 0 20px;;
 }
 
+/* content */
