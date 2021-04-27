@@ -23,11 +23,10 @@
 
 {% for planet in planets %}
     <div class="planets">
-        <form action="/planets/{planet.id/delete}">    
-            <div class="content">
-                <p>Name: {{planet.name}}</p>
-                <p>System: {{planet.system.name}}</p> 
-            </div>
+    <div class="content">
+            <p>Name: {{planet.name}}</p>
+            <p>System: {{planet.system.name}}</p> 
+        <form action="/planets/{{planet.id}}/delete" method="POST">    
             <button type="submit">Execute</button>
         </form>
     </div>

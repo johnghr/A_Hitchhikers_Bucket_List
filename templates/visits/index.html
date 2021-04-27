@@ -3,22 +3,25 @@
 
 {% for visit in visits %}
 <div class="visit">
-    <div class="content">
-        <div class="goal">
-        <p>Goal: {{visit.goal}}</p>
-        </div>
-        <div class="system">
-            <p>System: {{visit.system.name}}</p>  
-        </div>
-        <div class="planet">
-            <p>Planet: {{visit.planet.name}}</p>
-        </div>
-        <div class="achieved">
-            <p>Achieved? {{visit.achieved}}</p>
-        </div>
-        <div>
-            <a href="/visits/{{visit.id}}">Select</a>
-        </div>
+        <div class="content">
+            <div class="goal">
+            <p>Goal: {{visit.goal}}</p>
+            </div>
+            <div class="system">
+                <p>System: {{visit.system.name}}</p>  
+            </div>
+            <div class="planet">
+                <p>Planet: {{visit.planet.name}}</p>
+            </div>
+            <div class="achieved">
+                <p>Achieved? {{visit.achieved}}</p>
+            </div>
+            <div>
+                <a href="/visits/{{visit.id}}">Select</a>
+            </div>
+        <form action="/visits/{{visit.id}}/delete" method="POST">    
+            <button type="submit">Execute</button>
+        </form>  
     </div>
 </div>
 {% endfor %}
