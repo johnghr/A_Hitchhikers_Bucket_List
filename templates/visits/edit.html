@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <form action="/visits/{{visit.id}}" method="POST">
-    
     <div>
-        <label for="achieved">Visit:</label>
-        <select name="achieved" id="achieved"></select>    
-            <option value="{{visit.achieved}}">True</option>
-            <option value="{{visit.achieved}}">False</option>
+
+        <label for="achieved">Visit Achieved:</label>
+        {% if visit.achieved == True %}
+            <input type="checkbox" id="achieved" checked name="achieved">
+        {% else %}
+            <input type="checkbox" id="achieved" name="achieved">
+        {% endif %}
     </div>
 
     <button type="submit">Execute</button>

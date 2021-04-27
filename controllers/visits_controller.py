@@ -35,9 +35,28 @@ def create_visit():
     return redirect('/visits')
 
 @visits_blueprint.route("/visits/<id>", methods=['GET'])
-def show_task(id):
+def show_visit(id):
     visit = visit_repository.select(id)
     return render_template('visits/show.html', visit = visit)
+
+@visits_blueprint.route("/visits/<id>/edit", methods=['GET'])
+def edit_visit(id):
+    visit = visit_repository.select(id)
+    return render_template('visits/edit.html', visit = visit)
+
+@visits_blueprint.route("/visits/<id>", methods=["POST"])
+def update(id):
+    visit = visit_repository.select(id)
+    if request.form.get('achieved'):
+        visit.achieved = True
+    else:
+        visit.achieved = False
+    visit_repository.update(visit)
+    return redirect(f'/visits/{id}')
+    # return redirect('/visits')
+    
+
+
 
 
 
