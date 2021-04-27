@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/visits/{{visit.id}}" method="POST">
+    
+    <div>
+        <label for="achieved">Visit:</label>
+        <select name="achieved" id="achieved"></select>    
+            <option value="{{visit.achieved}}">True</option>
+            <option value="{{visit.achieved}}">False</option>
+    </div>
+
+    <button type="submit">Execute</button>
+
+</form>
+
+{%  endblock %}
