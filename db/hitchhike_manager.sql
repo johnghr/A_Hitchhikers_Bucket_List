@@ -11,7 +11,7 @@ CREATE TABLE systems (
 CREATE TABLE planets (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    system_id INT REFERENCES systems(id)
+    system_id INT REFERENCES systems(id) on DELETE CASCADE
 );
 
 CREATE TABLE visits (
