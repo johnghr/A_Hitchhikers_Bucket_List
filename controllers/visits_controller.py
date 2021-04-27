@@ -30,7 +30,7 @@ def create_visit():
     planet_id = request.form['planet_id']
     achieved = request.form['achieved']
     planet = planet_repository.select(planet_id)
-    visit = Visit(goal, planet.system, planet, achieved)
+    visit = Visit(goal, planet, achieved)
     visit_repository.save(visit)
     return redirect('/visits')
 

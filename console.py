@@ -29,6 +29,7 @@ system_repository.select_all()
 selected_system = system_repository.select(1)
 
 visit_1 = Visit("Watch the universe end alongside a slap up meal.", planet_2)
+print(visit_1.planet.system.id)
 visit_repository.save(visit_1)
 
 visit_2 = Visit("Have a pint or four at The Red Lion before the earth is destroyed to make way for hyperspace-bypass ", planet_1)

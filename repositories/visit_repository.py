@@ -8,7 +8,7 @@ import repositories.planet_repository as planet_repository
 
 def save(visit):
     # id assigned in database but not in python object instance
-    sql = "INSERT INTO visits (goal, planet_id, achieved) VALUES (%s, %s, %s, %s) RETURNING *"
+    sql = "INSERT INTO visits (goal, planet_id, achieved) VALUES (%s, %s, %s) RETURNING *"
     values = [visit.goal, visit.planet.id, visit.achieved]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -25,9 +25,8 @@ def select_all():
 
     for row in results:
        
-        system = system_repository.select(row['system_id'])
         planet = planet_repository.select(row['planet_id'])
-        visit = Visit(row['goal'], system, planet, row['achieved'], row['id'])
+        visit = Visit(row['goal'], planet, row['achieved'], row['id'])
         visits.append(visit)
     
     return visits

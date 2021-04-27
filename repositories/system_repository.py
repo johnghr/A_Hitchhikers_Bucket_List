@@ -24,8 +24,6 @@ def select_all():
 
 
 def select(id):
-    print("system id")
-    print(id)
     user = None
     sql = "SELECT * FROM systems WHERE id = %s"
     values = [id]
@@ -36,8 +34,6 @@ def select(id):
     return system
 
 def update(system):
-    print(system.name)
-    print(system.id)
     sql = "UPDATE systems SET name = %s WHERE id = %s"
     values = [system.name, system.id]
     run_sql(sql, values)
