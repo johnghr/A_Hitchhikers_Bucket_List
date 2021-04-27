@@ -17,16 +17,19 @@
         <input type="text" name="planet" id="planets" required autofocus>
     </div>
 
-    <button type="submit">Execute</button>
+    
 
 </form>
 
 {% for planet in planets %}
     <div class="planets">
-        <div class="content">
-            <p>Name: {{planet.name}}</p>
-            <p>System: {{planet.system.name}}</p> 
-        </div>
+        <form action="/planets/{planet.id/delete}">    
+            <div class="content">
+                <p>Name: {{planet.name}}</p>
+                <p>System: {{planet.system.name}}</p> 
+            </div>
+            <button type="submit">Execute</button>
+        </form>
     </div>
 {% endfor %}
 {% endblock %}
