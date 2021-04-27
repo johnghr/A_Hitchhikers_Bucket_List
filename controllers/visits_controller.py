@@ -55,13 +55,17 @@ def update(id):
     return redirect(f'/visits/{id}')
 
 
-@visits_blueprint.route("/visits/<id>/delete", methods=['POST'])
-def delete_planet(id):
-    visit = visit_repository.select(id)
-    planet = visit.planet
-    planet.name = "None"
+# @visits_blueprint.route("/visits/<id>/delete", methods=['POST'])
+# def delete_planet(id):
+#     visit = visit_repository.select(id)
+#     planet = visit.planet
+#     planet.name =  "None"
+#     planet_repository.update(planet)
 
-    return redirect(f'/visits/{id}')
+#     visit_repository.update(visit)
+#     return redirect(f'/visits/{id}')
+
+
     
 
 

@@ -6,6 +6,3 @@ class Visit:
         self.planet = planet
         self.achieved = achieved
         self.id = id
-
-    def mark_achieved(self):
-        self.completed = True

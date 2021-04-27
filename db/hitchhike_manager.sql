@@ -17,7 +17,6 @@ CREATE TABLE planets (
 CREATE TABLE visits (
     id SERIAL PRIMARY KEY,
     goal VARCHAR(255),
-    system_id INT REFERENCES systems(id),
-    planet_id INT REFERENCES planets(id),
+    planet_id INT REFERENCES planets(id) ON DELETE CASCADE,
     achieved BOOLEAN 
 );
