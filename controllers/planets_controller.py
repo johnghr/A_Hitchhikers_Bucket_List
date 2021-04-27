@@ -16,7 +16,7 @@ def planets():
     return render_template('planets/index.html', planets = planets, systems = systems)
 
 @planets_blueprint.route("/planets", methods=['GET'])
-def list_planets():
+def new_planet():
     systems = system_repository.select_all()
     planets = planet_repository.select_all()
     return render_template('planets/index.html', systems = systems, planets = planets)

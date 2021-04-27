@@ -8,8 +8,8 @@ import repositories.planet_repository as planet_repository
 
 def save(visit):
     # id assigned in database but not in python object instance
-    sql = "INSERT INTO visits (goal, system_id, planet_id, achieved) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [visit.goal, visit.system.id, visit.planet.id, visit.achieved]
+    sql = "INSERT INTO visits (goal, planet_id, achieved) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [visit.goal, visit.planet.id, visit.achieved]
     results = run_sql(sql, values)
     id = results[0]['id']
     # assigns id created in database to python object instance
