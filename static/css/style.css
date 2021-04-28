@@ -24,6 +24,9 @@
 main {
     border-top: 3px solid #B8B8B8;
     border-left: 3px solid #B8B8B8;
+    background-image: url("/static/images/stars-field.png");
+    background-position: center;
+    background-size: cover;
 }
 
 nav {
@@ -55,12 +58,19 @@ header {
     display: flex;
     border-bottom: 3px solid #B8B8B8;
     border-right: 3px solid #B8B8B8;
+    background-image: url("/static/images/thumb.webp");
+    background-position: center;
+    background-size: cover;
+    
+    
 }
 
 h1 {
     max-width: 190px;
     font-family: monospace, Arial, Helvetica, sans-serif;
     font-size: 25px;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 1px 0 20px;
 }
 
 body {
@@ -79,16 +89,18 @@ body > * {
 }
 
 h2 {
+    font-family: Arial, Helvetica, sans-serif;
     color: #DBDB2C;
     font-size: 150px;
-    display: flex;
-    justify-content: center;
-    text-shadow: rgb(235, 8, 8) 1px 0 20px;;
+    text-shadow: rgb(235, 8, 8) 1px 0 20px;
 }
 
-img {
-    width: 400px;
-    height: 400px;
+.dont-panic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 /* content */

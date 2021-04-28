@@ -18,7 +18,7 @@ def visits():
 
 # GET - Returns html form to the browser
 @visits_blueprint.route("/visits/new", methods=['GET'])
-def list_visits():
+def new_visits():
     systems = system_repository.select_all()
     planets = planet_repository.select_all()
     return render_template("visits/new.html", systems = systems, planets = planets)
@@ -46,6 +46,7 @@ def edit_visit(id):
 
 @visits_blueprint.route("/visits/<id>", methods=["POST"])
 def update(id):
+    print("hit edit controller")
     visit = visit_repository.select(id)
     if request.form.get('achieved'):
         visit.achieved = True

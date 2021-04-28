@@ -39,14 +39,13 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        system = system_repository.select(result['system_id'])
         planet = planet_repository.select(result['planet_id'])
-        visit = Visit(result['goal'], system, planet, result['achieved'], result['id'])
+        visit = Visit(result['goal'], planet, result['achieved'], result['id'])
     return visit
 
 def update(visit):
-    sql = "UPDATE visits SET (goal, system_id, planet_id, achieved) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [visit.goal, visit.system.id, visit.planet.id, visit.achieved, visit.id]
+    sql = "UPDATE visits SET (goal, planet_id, achieved) = (%s, %s, %s) WHERE id = %s"
+    values = [visit.goal, visit.planet.id, visit.achieved, visit.id]
     run_sql(sql, values)
 
 def delete(id):

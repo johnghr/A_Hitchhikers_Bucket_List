@@ -1,29 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-<!-- <div class="visit">
-    <div class="content">
-        <div class="goal">
-        <p>Goal: {{visit.goal}}</p>
-        </div>
-        <div class="system">
-            <p>System: {{visit.system.name}}</p>  
-        </div>
-        <div class="buttons">
-
-            <form action="/visits/{{visit.id}}/delete" method="POST">
-                <p>Planet: {{visit.planet.name}}</p>        
-                    <button type="submit">Terminate</button>
-            </form>        
-        </div>
-    </div>
-</div> -->
-
-
-
-
-<form action="/visits/{{visit.id}}/" method="POST">
+<form action="/visits/{{visit.id}}" method="POST">
     <div>
         <label for="achieved">Visit Achieved:</label>
         {% if visit.achieved == True %}
