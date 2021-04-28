@@ -1,15 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/visits/{{visit.id}}" method="POST">
+<form class="edit-visit-form" action="/visits/{{visit.id}}" method="POST">
     
+    <div class="content-container">
+        <div class="content">
+            <p>{{visit.goal}}</p>
+            <hr>
+            <p>System: {{visit.planet.system.name}}</p>
+            <p>Planet: {{visit.planet.name}}</p>
+        </div>
+   </div>
     <div>
+        
         <label for="achieved">Visit Achieved:</label>
         {% if visit.achieved == True %}
             <input type="checkbox" id="achieved" checked name="achieved">
         {% else %}
             <input type="checkbox" id="achieved" name="achieved">
         {% endif %}
+
     </div>
 
     <div class="button-container">

@@ -34,11 +34,6 @@ def create_visit():
     visit_repository.save(visit)
     return redirect('/visits')
 
-@visits_blueprint.route("/visits/<id>", methods=['GET'])
-def show_visit(id):
-    visit = visit_repository.select(id)
-    return render_template('visits/show.html', visit = visit)
-
 @visits_blueprint.route("/visits/<id>/edit", methods=['GET'])
 def edit_visit(id):
     visit = visit_repository.select(id)
@@ -56,18 +51,6 @@ def update(id):
     return redirect(f'/visits/{id}')
 
 
-# @visits_blueprint.route("/visits/<id>/delete", methods=['POST'])
-# def delete_planet(id):
-#     visit = visit_repository.select(id)
-#     visit.planet.name = "None"
-#     planet_repository.update(planet)
-#     visit_repository.update(visit)
-#     return redirect(f'/visits/{id}')
-
-# @visits_blueprint.route("/visits/<id>/delete", methods=['POST'])
-# def delete_visit(id):
-#     visit_repository.delete(id)
-#     return redirect('/visits')
 
 
     
