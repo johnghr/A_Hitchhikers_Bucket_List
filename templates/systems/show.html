@@ -1,9 +1,13 @@
 {% extends "base.html"%}
 {% block content %}
 
-<div>
-    <p>{{system.name}}</p>
-    <p><a href="/systems/{{system.id}}/edit">Edit</a></p>
+<div class="content-container">
+    <div class="content">
+        <p>{{system.name}}</p>
+    </div>    
+    <div class="button-container">
+        <a class="button" href="/systems/{{system.id}}/edit">Edit</a>
+    </div>    
 </div>
 
 {% endblock %}

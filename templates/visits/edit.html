@@ -2,6 +2,7 @@
 {% block content %}
 
 <form action="/visits/{{visit.id}}" method="POST">
+    
     <div>
         <label for="achieved">Visit Achieved:</label>
         {% if visit.achieved == True %}
@@ -11,7 +12,9 @@
         {% endif %}
     </div>
 
-    <button type="submit">Execute</button>
+    <div class="button-container">
+        <button class="button" type="submit">Execute</button>
+    </div>
 
 </form>
 
