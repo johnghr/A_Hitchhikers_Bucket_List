@@ -9,15 +9,17 @@
         <input type="text" name="system" id="system" required autofocus>
     </div>
     
-    <button type="submit">Execute</button>
+    <button class="button" type="submit">Execute</button>
     
 </form>
 
 {% for system in systems %}
-<div class="content-container form" >
+<div class="content-container" >
     <div class="content">
-        <p>Name: {{system.name}}</p>
-        <a href="/systems/{{system.id}}">Edit</a>
+        <p>{{system.name}}</p>
+        <div class="button-container">
+            <a class="button" href="/systems/{{system.id}}">Modify</a>
+        </div>
     </div>
 </div>
 {% endfor %}

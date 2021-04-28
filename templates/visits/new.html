@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<form action="/visits" method="POST">
-    <div>
+<form class="add-to-list" action="/visits" method="POST">
+    <div class="form-item">
         <label for="goal">Goal:</label>
         <input type="text" name="goal" id="goal" required autofocus>
     </div>
     
-    <div>
+    <div class="form-item">
         <label for="planet_id">Planet:</label>
         <select name="planet_id" id="planet_id">
             {% for planet in planets %}
@@ -17,7 +17,7 @@
         </select>        
     </div>
 
-    <div>
+    <div class="form-item">
         <label for="Achieved">Achieved:</label>
         <select name="achieved" id="completed">
             <option value="true">True</option>
@@ -25,7 +25,9 @@
         </select>
     </div>
 
-    <button type="submit">Add to list</button>
+    <div class="button-container">
+        <button class="button" type="submit">Update</button>
+    </div>
 
 </form>
 {% endblock %}
