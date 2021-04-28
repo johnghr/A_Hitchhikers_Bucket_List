@@ -9,7 +9,7 @@ from models.system import System
 
 visits_blueprint = Blueprint("visits", __name__)
 
-# route for list of visits
+# route for list of visits - Reading
 @visits_blueprint.route("/visits")
 def visits():
     visits = visit_repository.select_all()
@@ -17,7 +17,7 @@ def visits():
     return render_template("visits/index.html", visits = visits, planets = planets)
 
 # GET - Returns html form to the browser
-@visits_blueprint.route("/visits/new", methods=['GET'])
+@visits_blueprint.route("/visits/new")
 def new_visits():
     systems = system_repository.select_all()
     planets = planet_repository.select_all()
@@ -48,7 +48,7 @@ def update(id):
     else:
         visit.achieved = False
     visit_repository.update(visit)
-    return redirect(f'/visits/{id}')
+    return redirect('/visits')
 
 
 
