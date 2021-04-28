@@ -173,8 +173,16 @@ a.button {
     justify-content: space-evenly ;
 }
 
-.form-item {
+form {
     display: flex;
     justify-content: center;
+    background-color: rgb(51,202,1, 0.7);
+    border: 3px solid #B8B8B8;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    color: black;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
 }
 

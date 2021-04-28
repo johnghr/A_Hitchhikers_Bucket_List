@@ -4,13 +4,11 @@
 
 <form action="/systems" method="POST">
        
-    <div>
         <label for="systems">Input System:</label>
         <input type="text" name="system" id="system" required autofocus>
-    </div>
     
     <button class="button" type="submit">Execute</button>
-    
+
 </form>
 
 {% for system in systems %}
