@@ -41,7 +41,10 @@ aside {
 
 .side-menu {
     list-style: none;
-    padding:0%
+    padding:0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .side-menu > li {
@@ -104,3 +107,16 @@ h2 {
 }
 
 /* content */
+
+.content-container {
+    border: 3px solid #B8B8B8;
+    background-color: #41FF00;
+    opacity:0.4;
+    margin: 10px;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+} 
+
+.content > p {
+   color: rgb(43, 42, 42);
+
+}

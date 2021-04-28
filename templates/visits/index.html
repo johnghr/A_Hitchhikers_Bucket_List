@@ -2,23 +2,15 @@
 {% block content %}
 
 {% for visit in visits %}
-<div class="visit">
-    <div class="content">
-        <div class="goal">
-        <p>Goal: {{visit.goal}}</p>
-        </div>
-        <div class="system">
+    <div class="content-container">
+        <div class="content">    
+            <p>Goal: {{visit.goal}}</p>
+            <hr>
             <p>System: {{visit.planet.system.name}}</p>  
-        </div>
-        <div class="planet">
             <p>Planet: {{visit.planet.name}}</p>
-        </div>
-        <div class="achieved">
             <p>Achieved? {{visit.achieved}}</p>
-        </div>
-        <div>
             <a href="/visits/{{visit.id}}">Select</a>
-        </div>  
+        </div>    
     </div>
 </div>
 {% endfor %}

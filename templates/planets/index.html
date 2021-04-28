@@ -22,13 +22,14 @@
 </form>
 
 {% for planet in planets %}
-    <div class="planets">
+    <div class="content-container">
         <form action="/planets/{{planet.id}}/delete" method="POST">  
             <div class="content">
                 <p>Name: {{planet.name}}</p>
                 <p>System: {{planet.system.name}}</p> 
-            </div>
             <button type="submit">Terminate</button>
+            </div>
+            
         </form>  
     </div>
 {% endfor %}
