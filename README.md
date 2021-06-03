@@ -14,8 +14,8 @@ In order to run this application please:
 2. Navigate to the application folder
 3. Instal flask with the command - pip install Flask
 3. If you do not have psql installed please:
-   a. intall Brew Package Manager - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   b. symlink psql - brew link --force libpq ail
+    intall Brew Package Manager - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    symlink psql - brew link --force libpq ail
 4. Create the database with command - createdb hitchhike_manager
 5. Run the database with command - psql -d hitchhike_manager -f db/hitchhike_manager.sql
 6. Initialize the server with command - flask run
