@@ -1,12 +1,10 @@
 # A_Hitchhikers_Bucket_List 
 
-Is an application I completed while consolidating my knowledge of using python to create full-stack applications. The app is 
-thematically based on Douglas Adams Hitchhikers Guide to the Galaxy. It allows you to input star systems and corresponding 
-planets into the database, and then from their they can be added to a destination bucket list. Destinations can be checked 
-off the list once they have beenachieved. 
+An application I completed while consolidating my knowledge of using python to create full-stack applications. The app is 
+thematically based on Douglas Adams Hitchhikers Guide to the Galaxy.  
 
 The application is written primarily in Python with Jinja used for front-end HTML templating. Flask is used to run the server 
-and routes are written according the restfulprinciples. The database is relaional and handled using PSQL.
+and routes are written according the RESTful principles. The database is relaional and handled using PSQL.
 
 In order to run this application please:
 
